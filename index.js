@@ -16,7 +16,7 @@ The function should:
 */
 
 function createMenuItem(name, price, category){
-retur}
+return(name, price, category)}
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
