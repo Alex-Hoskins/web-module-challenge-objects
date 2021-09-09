@@ -15,8 +15,9 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(name, price, category){
-return(name, price, category)}
+function createMenuItem(name,price, category){
+  return{name, price, category}
+  }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -27,6 +28,17 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+let tacos = createMenuItem('tacos',8, 'lunch');
+
+console.log(tacos)
+
+let steak=createMenuItem('steak',16,'dinner')
+
+console.log(steak)
+
+let pasta=createMenuItem('pasta',12,'dinner')
+
+console.log(pasta)
 
 
 
@@ -46,8 +58,17 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(status){
+  if(status === 'teacher' || status === 'student'){
+    return this.price * .75
+    }
+  else if(status === 'public'){
+    return this.price * 0.90
+    }
+  }
 }
+
+
 
 
 
@@ -67,6 +88,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
+console.log(reviews[5].feedback)
 
 
 
@@ -91,9 +113,11 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+  array.push({name, rating, feedback});
+    return array;
 }
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -106,8 +130,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(arr, number) {
+  return `${arr[number].name} gave the restaurant a ${arr[number].rating} star review, and their feedback was: ${arr[number].feedback}`
 }
 
 
@@ -125,11 +149,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`
 } 
 
-
+getLastReview(reviews)
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
